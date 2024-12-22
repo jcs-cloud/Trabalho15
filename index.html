@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Trabalho14</title>
+</head>
+
+<style>
+ h1 {font-size: 40px;font-family: Arial;color: rgb(163, 95, 209);text-align: center;margin-bottom: 30px;}
+ p  {font-size: 20px;font-family: Arial;color:black}
+p1 {font-size: 20px;font-family: Arial; }
+table, th, td {
+  border: 1px solid black; width:40%;
+  border-collapse: collapse;font-size: 20px;font-family: Arial;color:black; 
+}
+h2 {font-size: 40px;font-family: Arial;color:green;text-align: center;margin-bottom: 30px;}
+</style>
+ 
+<body>
+ <h1>Padrões Mágicos</h1>
+<center>
+    <table>
+        <tr>
+            <th>Padrão #1: Estrela Quadrada</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"; id="padrao1"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #2: Quadrado Oco</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao2"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #3: Triângulo Retângulo</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao3"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #4: Triângulo Esquerdo</th>
+        </tr>
+        <tr>
+            <td style="text-align: left;"id="padrao4"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #5: Estrela em Triângulo Descendente</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao5"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #6: Estrela em Triângulo Oco</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao6"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #7: Pirâmide</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao7"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #8: Estrela de Pirâmide Invertida</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao8"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #9: Estrela em Pirâmide Oca</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao9"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #10: Diamante</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao10"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #11: Diamante Oco</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao11"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #12: Estrela de Ampulheta</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao12"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #13: Estrela de Pascal Direita</th>
+        </tr>
+        <tr>
+            <td style="text-align: left;"id="padrao13"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #14: Estrela de Pascal Esquerda</th>
+        </tr>
+        <tr>
+            <td style="text-align: right;"id="padrao14"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Padrão #15: Estrela do Coração</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"id="padrao15"></td>
+        </tr>
+    </table>
+</center>
+
+
+<h2> Feliz Natal!</h2>
+<center>
+<p1 id="natal"></p1>
+</center>
+
+ <script>
+    const x = "*****"; 
+        let text = "";
+
+        for (let i = 0; i < 5; i++) {
+            text += x + "<br>"; 
+        }
+        document.getElementById("padrao1").innerHTML = text;
+    
+        let padrao2 = "";
+for (let i = 0; i < 5; i++) {
+    if (i === 0 || i === 4) {
+        padrao2 += "*****<br>";
+    } else {
+        padrao2 += "* &nbsp;&nbsp;&nbsp;*<br>";
+    }
+}
+document.getElementById("padrao2").innerHTML = padrao2;
+    
+let padrao3 = "";
+for (let p = 0; p < 5; p++) {
+    if (p === 0) {
+        padrao3 += "&nbsp;&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (p === 1) {
+        padrao3 += "&nbsp;&nbsp;&nbsp;**<br>";
+    }  if (p === 2) {
+        padrao3 += "&nbsp;&nbsp;***<br>";
+    }  if (p === 3) {
+        padrao3 += "&nbsp;****<br>";
+    }  if (p === 4) {
+        padrao3 += "*****<br>";
+    } 
+}
+document.getElementById("padrao3").innerHTML = padrao3;
+
+let padrao4 = "";
+for (let z = 0; z < 5; z++) {
+    if (z === 4) {
+        padrao4 += "*****<br>";
+    }  if (z === 3) {
+        padrao4 += "****<br>";
+    }  if (z === 2) {
+        padrao4 += "***<br>";
+    }  if (z === 1) {
+        padrao4 += "**<br>";
+    }  if (z === 0) {
+        padrao4+= "*<br>";
+    } 
+}
+document.getElementById("padrao4").innerHTML = padrao4;
+
+let padrao5 = "";
+for (let p = 0; p < 5; p++) {
+    if (p === 4) {
+        padrao5 += "*<br>";
+    }  if (p === 3) {
+        padrao5 += "**<br>";
+    }  if (p === 2) {
+        padrao5 += "***<br>";
+    }  if (p === 1) {
+        padrao5 += "****<br>";
+    }  if (p === 0) {
+        padrao5 += "*****<br>";
+    } 
+}
+document.getElementById("padrao5").innerHTML = padrao5;
+
+
+let padrao6 = "";
+for (let z = 0; z < 6; z++) {
+    if (z === 5) {
+        padrao6 += "******<br>";
+    } 
+    if (z === 4) {
+        padrao6 += "*&nbsp;&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (z === 3) {
+        padrao6 += "*&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (z === 2) {
+        padrao6 += "*&nbsp;&nbsp;*<br>";
+    }  if (z === 1) {
+        padrao6 += "*&nbsp;*<br>";
+    }  if (z === 0) {
+        padrao6+= "*<br>";
+    } 
+}
+document.getElementById("padrao6").innerHTML = padrao6; 
+    
+let padrao7 = "";
+for (let p = 0; p < 5; p++) {
+    if (p === 0) {
+        padrao7 += "*<br>";
+    }  if (p === 1) {
+        padrao7 += "***<br>";
+    }  if (p === 2) {
+        padrao7 += "*****<br>";
+    }  if (p === 3) {
+        padrao7 += "*******<br>";
+    }  if (p === 4) {
+        padrao7 += "*********<br>";
+    } 
+}
+document.getElementById("padrao7").innerHTML = padrao7;   
+    
+let padrao8 = "";
+for (let p = 0; p < 5; p++) {
+    if (p === 4) {
+        padrao8 += "*<br>";
+    }  if (p === 3) {
+        padrao8 += "***<br>";
+    }  if (p === 2) {
+        padrao8 += "*****<br>";
+    }  if (p === 1) {
+        padrao8 += "*******<br>";
+    }  if (p === 0) {
+        padrao8 += "*********<br>";
+    } 
+}
+document.getElementById("padrao8").innerHTML = padrao8;   
+    
+let padrao9 = "";
+for (let p = 0; p < 5; p++) {
+    if (p === 0) {
+        padrao9 += "*<br>";
+    }  if (p === 1) {
+        padrao9 += "*&nbsp;*<br>";
+    }  if (p === 2) {
+        padrao9 += "*&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (p === 3) {
+        padrao9 += "*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (p === 4) {
+        padrao9 += "*********<br>";
+    } 
+}
+document.getElementById("padrao9").innerHTML = padrao9;     
+
+let padrao11 = "";
+for (let p = 0; p < 9; p++) {
+    if (p === 0 || p === 8) {
+        padrao11 += "*<br>";
+    }  if (p === 1|| p === 7) {
+        padrao11 += "*&nbsp;*<br>";
+    }  if (p === 2 || p === 6) {
+        padrao11 += "*&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (p === 3 || p === 5) {
+        padrao11 += "*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>";
+    }  if (p === 4) {
+        padrao11 += "*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>";
+    } 
+}
+document.getElementById("padrao11").innerHTML = padrao11;     
+
+let padrao10 = "";
+for (let p = 0; p < 9; p++) {
+    if (p === 0 || p === 8) {
+        padrao10 += "*<br>";
+    }  if (p === 1|| p === 7) {
+        padrao10 += "**<br>";
+    }  if (p === 2 || p === 6) {
+        padrao10 += "*****<br>";
+    }  if (p === 3 || p === 5) {
+        padrao10 += "*******<br>";
+    }  if (p === 4) {
+        padrao10 += "*********<br>";
+    } 
+}
+document.getElementById("padrao10").innerHTML = padrao10;     
+
+let padrao12 = "";
+for (let p = 0; p < 9; p++) {
+    if (p === 0 || p === 8) {
+        padrao12 += "*********<br>";
+    }  if (p === 1|| p === 7) {
+        padrao12 += "*******<br>";
+    }  if (p === 2 || p === 6) {
+        padrao12 += "*****<br>";
+    }  if (p === 3 || p === 5) {
+        padrao12 += "***<br>";
+    }  if (p === 4) {
+        padrao12 += "*<br>";
+    } 
+}
+document.getElementById("padrao12").innerHTML = padrao12;     
+
+let padrao13 = "";
+for (let p = 0; p < 9; p++) {
+    if (p === 0 || p === 8) {
+        padrao13 += "*<br>";
+    }  if (p === 1|| p === 7) {
+        padrao13 += "**<br>";
+    }  if (p === 2 || p === 6) {
+        padrao13 += "***<br>";
+    }  if (p === 3 || p === 5) {
+        padrao13 += "****<br>";
+    }  if (p === 4) {
+        padrao13 += "*****<br>";
+    } 
+}
+document.getElementById("padrao13").innerHTML = padrao13;  
+
+let padrao14 = "";
+for (let p = 0; p < 9; p++) {
+    if (p === 0 || p === 8) {
+        padrao14 += "*<br>";
+    }  if (p === 1|| p === 7) {
+        padrao14 += "**<br>";
+    }  if (p === 2 || p === 6) {
+        padrao14 += "***<br>";
+    }  if (p === 3 || p === 5) {
+        padrao14 += "****<br>";
+    }  if (p === 4) {
+        padrao14 += "*****<br>";
+    } 
+}
+document.getElementById("padrao14").innerHTML = padrao14;     
+
+let padrao15 = "";
+for (let p = 0; p < 8; p++) {
+    if (p === 0 ) {
+        padrao15 += "***&nbsp;&nbsp;&nbsp;***<br>";
+    }  if (p === 1) {
+        padrao15 += "****&nbsp;*****<br>";
+    }  if (p === 2 ) {
+        padrao15 += "***********<br>";
+    }  if (p === 3 ) {
+        padrao15 += "*********<br>";
+    }  if (p === 4) {
+        padrao15 += "*******<br>";
+    } if (p === 5) {
+        padrao15 += "*****<br>";
+    } if (p === 6) {
+        padrao15 += "***<br>";
+    } if (p === 7) {
+        padrao15 += "*<br>";
+    }}
+document.getElementById("padrao15").innerHTML = padrao15;     
+
+let natal = "";
+for (let p = 0; p < 23; p++) {
+    if (p > 15 ) {
+        natal += "◼︎◼︎◼︎◼︎◼︎◼︎<br>";
+    }  if (p === 1) {
+        natal += "❆❄︎<br>";
+    }  if (p === 2 ) {
+        natal += "❆❄︎❆❄︎<br>";
+    }  if (p === 3 ) {
+        natal += "❆❄︎❆❄︎❆❄︎<br>";
+    }  if (p === 4) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    } if (p === 5) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    } if (p === 6) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    } if (p === 7) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 0) {
+        natal += "★<br>";
+    }if (p === 8) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 9) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 10) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 11) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 12) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 13) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 14) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }if (p === 15) {
+        natal += "❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎❆❄︎<br>";
+    }}
+document.getElementById("natal").innerHTML = natal;     
+
+
+
+    </script>
+
+ 
+</body>
+</body>
